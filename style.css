@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+body{
+    background-color: antiquewhite;
+
+}
+
+
+ /* * is used to slect any and all types of elements in html page
+ universal selector */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* using flex navbar ke sare elemnts horizontally ho jaanege */
+nav ul{
+    display: flex;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    align-items: center;
+    color:white;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+
+.brand img{
+    width: 42px;
+    padding: 0 8px;
+}
+
+/* 1.3rem is equal to 18px and 24px == 1.4rem, 1.5rem */
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container{
+      /* due to this apni progressive bar bottom me chli jaaegi  
+     75vh means initial body height will take 75% of viewport height */
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('bgt.jpg');
+     background-repeat: no-repeat;
+     
+     background-size: cover;
+}
+
+.bottom{
+    /* sticky is based on the user scroll position
+    it is hybrid of relative or fixed position */
+    position: sticky;
+    height: 130px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* direction column krne se icons niche show ho jaanege progressbar k */
+    flex-direction: column;
+
+}
+
+.icons{
+    margin: 14px;
+   
+}
+
+
+
+/* jo .icons k andar i hai usme cursor ko krdo pointer taki me song play pause kr sku */
+.icons i{
+   cursor: pointer;
+}
+
+
+/* isme elements ko centre nhi kr skte kyu ki yeh ek container nhi hai isliye bottom class me flex or align items use kiya hai */
+#myProgressBar{
+    width: 80vw;
+    cursor: pointer;
+}
+
+
+.songItemContainer{
+    margin: 34px;
+}
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+   
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+    
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+    
+}
+
+/* The timeStamp read-only property of the Event interface returns the time (in milliseconds) at which the event was created. */
+.timestamp{
+            margin: 0 23px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+
+/* The opacity in CSS is the property of an element that describes the transparency of the element. It is the opposite of transparency & represents the degree to which the content will be hidden behind an element. */
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    body {
+      background-color: red;
+    }
+  }
