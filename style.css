@@ -63,6 +63,8 @@ nav ul li{
      background-repeat: no-repeat;
      
      background-size: cover;
+     background-position: bottom;
+    
 }
 
 .bottom{
